@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jain.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="homepage.html" class="nav-link">Home</a></li>
+            <li><a href="principles.html" class="nav-link">Jainism Principles</a></li>
+            <li><a href="food.html" class="nav-link">Food Principles</a></li>
+            <li><a href="positiveeffects.html" class="nav-link">Positive Effects</a></li>
+            <li><a href="negativeimpacts.html" class="nav-link">Negative Impacts</a></li>
+            <li><a href="awareness.html" class="nav-link">Raising Awareness</a></li>
+        </ul>
+    </nav>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Example</title>
+    <style>
+      
+        body {
+            margin: 0;
+            height: 100vh; 
+            background-image: url('background.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+        
+        
+        .content {
+            color: rgb(255, 255, 255); 
+            text-align: center;
+            padding-top: 20%; 
+            font-size: 2em; 
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Essential Jainism: Principles for a Mindful Life</h1>
+        <p>Embracing Compassion and Non-Violence in Everyday Living"
+        </p>
+    </div>
+
+
+    <div class="principle-title-section">
+        <h2>What are these Principles?</h2>
+    </div>
+
+    <div class="principle-section">
+        <p> Jainism, an ancient Indian religion, is rooted in a profound commitment to ethical living and spiritual purity. At the heart of Jain philosophy are five fundamental principles that guide practitioners toward a life of compassion and harmony:
+  <br>
+  <br>
+            <strong> Ahimsa (Non-Violence): </strong> Central to Jain beliefs, Ahimsa emphasizes the importance of non-violence in thought, word, and deed. Jains strive to minimize harm to all living beings, reflecting deep respect for life and encouraging a lifestyle that fosters peace and empathy.
+  <br> 
+  <br>         
+            <strong>Anekantavada (Many-Sidedness): </strong> This principle recognizes the complexity of truth and the importance of multiple perspectives. Jains embrace the idea that reality is multifaceted and that understanding comes from considering various viewpoints. This approach promotes tolerance, dialogue, and a deeper appreciation for the diverse experiences of others.
+  <br> 
+  <br>         
+            <strong> Aparigraha (Non-Possessiveness): </strong> Aparigraha teaches the value of detachment from material possessions and desires. By practicing non-possessiveness, Jains aim to cultivate contentment and focus on spiritual growth, minimizing the distractions that come from material accumulation.
+   <br> 
+   <br>        
+            <strong> Satya (Truthfulness):</strong> Jains hold truth in high regard, understanding that honesty is essential for personal integrity and social harmony. Practicing Satya involves being truthful in all interactions, thereby fostering trust and respect within the community.
+    <br>
+    <br>        
+            <strong> Brahmacharya (Chastity): </strong> This principle encourages self-control and purity in thoughts and actions. Brahmacharya promotes a disciplined lifestyle, guiding individuals to direct their energies towards spiritual development rather than indulgence.
+     <br>
+     <br>       
+            Together, these principles form the foundation of Jain ethics, guiding followers in their quest for spiritual enlightenment and a compassionate existence. By embodying these values, Jains seek to create a harmonious world, where all living beings can thrive in peace and understanding. </p>
+    </div>
+    
+
+</style>
+</head>
+<body>
+<div class="quiz-container">
+<h1 class="qui">Test Your Knowledge of Jainism Principles</h1>
+<div id="quiz">
+    <div class="question" id="question"></div>
+    <ul class="options" id="options"></ul>
+</div>
+<button id="next-button" class="hide">Next</button>
+<div id="result" class="hide">
+    <div class="score" id="score"></div>
+    <button onclick="restartQuiz()">Restart Quiz</button>
+</div>
+</div>
+
+<img src="yamas.jpg" alt="Principle Image"  id="principle-image">
+
+<script>
+const questions = [
+    {
+        question: "What is the principle of Ahimsa?",
+        options: ["Non-violence", "Truthfulness", "Non-possessiveness", "Chastity"],
+        answer: 0
+    },
+    {
+        question: "Which principle emphasizes many-sidedness?",
+        options: ["Aparigraha", "Anekantavada", "Satya", "Brahmacharya"],
+        answer: 1
+    },
+    {
+        question: "What does Satya stand for?",
+        options: ["Chastity", "Truthfulness", "Non-violence", "Many-sidedness"],
+        answer: 1
+    },
+    {
+        question: "Aparigraha teaches us about:",
+        options: ["Material Possessions", "Self-control", "Compassion", "Non-violence"],
+        answer: 0
+    },
+    {
+        question: "What is Brahmacharya?",
+        options: ["Non-violence", "Chastity", "Truthfulness", "Many-sidedness"],
+        answer: 1
+    }
+];
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function loadQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    document.getElementById('question').innerText = currentQuestion.question;
+    const optionsContainer = document.getElementById('options');
+    optionsContainer.innerHTML = '';
+    currentQuestion.options.forEach((option, index) => {
+        const li = document.createElement('li');
+        li.classList.add('option');
+        li.innerText = option;
+        li.addEventListener('click', () => selectOption(index));
+        optionsContainer.appendChild(li);
+    });
+}
+
+function selectOption(selectedIndex) {
+    const correctIndex = questions[currentQuestionIndex].answer;
+    if (selectedIndex === correctIndex) {
+        score++;
+    }
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        loadQuestion();
+    } else {
+        showResult();
+    }
+}
+
+function showResult() {
+    document.getElementById('quiz').classList.add('hide');
+    document.getElementById('next-button').classList.add('hide');
+    document.getElementById('result').classList.remove('hide');
+    document.getElementById('score').innerText = `Your score: ${score} out of ${questions.length}`;
+}
+
+function restartQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    document.getElementById('quiz').classList.remove('hide');
+    document.getElementById('result').classList.add('hide');
+    loadQuestion();
+}
+
+loadQuestion();
+</script>
+
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 [Jainism for Youth]. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="homepage.html">Homepage</a></li>
+            <li><a href="principles.html">Jainism Principles</a></li>
+            <li><a href="food.html">Food Principles</a></li>
+            <li><a href="positiveeffects.html">Poistive Effects</a></li>
+            <li><a href="negativeimpacts.html">Negative Impacts</a></li>
+            <li><a href="awareness.html">Raising Awareness</a></li>
+        </ul>
+    </div>
+    <div class="footer-socials">
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+        <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background-color: #d3b686;
+        color: #000000;
+        text-align: center;
+        padding: 20px 0;
+        position: absolute;
+       top:1970px;
+        width: 100%;
+    }
+
+    .footer-content p {
+        margin: 0;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .footer-links li {
+        display: inline;
+        margin-right: 15px;
+    }
+
+    .footer-links a {
+        color: #000000;
+        text-decoration: none;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .footer-links a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-socials a {
+        color: #000000;
+        text-decoration: none;
+        margin: 0 10px;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .footer-socials a:hover {
+        text-decoration: underline;
+    }
+</style>
+<img class="logo" src="Jainism Logo Website.jpg" alt="Logo">
+</body>
+</body>
+</html>

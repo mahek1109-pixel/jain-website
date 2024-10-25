@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jain.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="homepage.html" class="nav-link">Home</a></li>
+            <li><a href="principles.html" class="nav-link">Jainism Principles</a></li>
+            <li><a href="food.html" class="nav-link">Food Principles</a></li>
+            <li><a href="positiveeffects.html" class="nav-link">Positive Effects</a></li>
+            <li><a href="negativeimpacts.html" class="nav-link">Negative Impacts</a></li>
+            <li><a href="awareness.html" class="nav-link">Raising Awareness</a></li>
+        </ul>
+    </nav>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Example</title>
+    <style>
+        /* CSS to set the background image */
+        body {
+            margin: 0;
+            height: 100vh; 
+            background-image: url('background.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+        
+        
+        .content {
+            color: rgb(255, 255, 255); 
+            text-align: center;
+            padding-top: 20%; 
+            font-size: 2em; 
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Jainism and Food: A Guide to Mindful Eating</h1>
+        <p>Nourishing the Body and Soul Through Jain Principles</p>
+    </div>
+
+    <div class="food-title-section">
+        <h2>What is it exactly?</h2>
+    </div>
+
+    <div class="food-section">
+        <p>Jainism's food practices are deeply rooted in the faith’s core principle of Ahimsa (non-violence). The reason behind this is a profound respect for all living beings. Jains believe that every act of consumption should minimize harm, so they avoid not only meat and eggs but also root vegetables like onions, garlic, and potatoes. This is because uprooting these plants causes harm to both the plant itself and the micro-organisms living in the soil.
+
+            Additionally, Aparigraha (non-possessiveness) informs why Jains practice mindful eating. By consuming only what is necessary, they avoid waste and overindulgence, fostering spiritual discipline and environmental balance. Jainism views food as more than just sustenance; it is an essential part of living a life of harmony with nature and reducing one’s karmic burden. These principles guide Jains toward conscious, compassionate choices that reflect their commitment to non-violence and spiritual purity.</p>
+    </div>
+
+    
+
+    <div class="form-container">
+        <h1 class="recipe">Share Your Recipe</h1>
+        <form id="recipeForm">
+            <label for="recipeTitle">Recipe Title:</label>
+            <input type="text" id="recipeTitle" name="recipeTitle" required>
+
+            <label for="ingredients">Ingredients:</label>
+            <textarea id="ingredients" name="ingredients" rows="5" required></textarea>
+
+            <label for="instructions">Instructions:</label>
+            <textarea id="instructions" name="instructions" rows="5" required></textarea>
+
+            <label for="imageUpload">Upload an Image:</label>
+            <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+
+            <button type="submit">Share Recipe</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('recipeForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            alert('Recipe submitted! Thank you for sharing.');
+            this.reset(); 
+        });
+    </script>
+
+    <div class="food-images-videos"> 
+    <a href="https://pinkispalate.com/2021/05/16/guilt-free-mumbai-pav-bhaji/" target="_blank">
+        <p>Pav Bhaji</p>
+        <img src="pav-bhaji.jpg" alt="Food Image 1">
+    </a>
+    <a href="https://pinkispalate.com/2013/02/12/jain-flat-bread-naan-pizza/" target="_blank">
+        <p>Naan Pizza</p>
+        <img src="naan-pizza.jpg" alt="Food Image 2">
+    </a>
+    <a href="https://pinkispalate.com/2013/01/30/masala-cream-nachos/" target="_blank">
+        <p>Masala Cream Nachos</p>
+        <img src="nachos.jpg" alt="Food Image 3">
+    </a>
+    <a href="https://pinkispalate.com/2014/04/16/potato-less-french-fries/" target="_blank">
+        <p>Potato-less French Fries</p>
+        <img src="chips.webp" alt="Food Image 4">
+    </a>
+    <a href="https://pinkispalate.com/2021/07/30/creamy-chana-masala/" target="_blank">
+        <p>Creamy Chana Masala</p>
+        <img src="chana-masala.jpg" alt="Food Image 5">
+    </a>
+    </div>
+    
+            <div class="food-images-videos2"> 
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/wIgvSB_YWNI" frameborder="0" allowfullscreen></iframe>
+                    <p>Cheese Stuffed Khandvi</p>
+                </div>
+                
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/9gbi-gwDnvs" frameborder="0" allowfullscreen></iframe>
+                    <p>Upvas Dosa</p>
+                </div>
+            
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/XrKyV18Bk3s" frameborder="0" allowfullscreen></iframe>
+                    <p>Makai Dhokla</p>
+                </div>
+            
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/QxurQdbJrvU" frameborder="0" allowfullscreen></iframe>
+                    <p>Arbi Stir Fry</p>
+                </div>
+            </div>
+
+            <footer>
+                <div class="footer-content">
+                    <p>&copy; 2024 [Jainism for Youth]. All rights reserved.</p>
+                    <ul class="footer-links">
+                        <li><a href="homepage.html">Homepage</a></li>
+                        <li><a href="principles.html">Jainism Principles</a></li>
+                        <li><a href="food.html">Food Principles</a></li>
+                        <li><a href="positiveeffects.html">Poistive Effects</a></li>
+                        <li><a href="negativeimpacts.html">Negative Impacts</a></li>
+                        <li><a href="awareness.html">Raising Awareness</a></li>
+                    </ul>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+                    <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+                    <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                </div>
+            </footer>
+            
+            <style>
+                footer {
+                    background-color: #d3b686;
+                    color: #000000;
+                    text-align: center;
+                    padding: 20px 0;
+                    position: absolute;
+                   top:1970px;
+                    width: 100%;
+                }
+            
+                .footer-content p {
+                    margin: 0;
+                    font-family: 'Oswald', sans-serif;
+                }
+            
+                .footer-links {
+                    list-style: none;
+                    padding: 0;
+                    margin: 10px 0;
+                }
+            
+                .footer-links li {
+                    display: inline;
+                    margin-right: 15px;
+                }
+            
+                .footer-links a {
+                    color: #000000;
+                    text-decoration: none;
+                    font-family: 'Oswald', sans-serif;
+                }
+            
+                .footer-links a:hover {
+                    text-decoration: underline;
+                }
+            
+                .footer-socials a {
+                    color: #000000;
+                    text-decoration: none;
+                    margin: 0 10px;
+                    font-family: 'Oswald', sans-serif;
+                }
+            
+                .footer-socials a:hover {
+                    text-decoration: underline;
+                }
+            </style>
+    
+    <img class="logo" src="Jainism Logo Website.jpg" alt="Logo">
+</body>
+</body>
+</html>
